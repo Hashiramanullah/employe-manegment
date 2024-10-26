@@ -2,12 +2,20 @@
 @tailwind components;
 @tailwind utilities;
 
-*{
+* {
   color: #fff;
 }
-body{
+.body {
   background-color: #111;
+  color: #fff;
 }
-#tasklist::-webkit-scrollbar{
+
+/* Hide the scrollbar but allow scrolling */
+#tasklist::-webkit-scrollbar {
   display: none;
+}
+
+#tasklist {
+  -ms-overflow-style: none; /* Internet Explorer and Edge */
+  scrollbar-width: none; /* Firefox */
 }
