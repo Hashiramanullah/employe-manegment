@@ -1,18 +1,18 @@
 import React from 'react'
 
-const FailedTask = () => {
+const FailedTask = ({data}) => {
   return (
-    <div className="h-full flex-shrink-0 w-[300px] p-5  bg-slate-400 rounded-xl">
+    <div className="h-full flex-shrink-0 w-[300px] p-5  bg-orange-400 rounded-xl">
     <div className='flex justify-between'>
-        <h3 className='bg-red-600 px-3 py-1 rounded text-sm'>High</h3>
-    <h4 className='text-sm'>20 feb 2024</h4>
+        <h3 className='bg-red-600 px-3 py-1 rounded text-sm'>{data.category}</h3>
+    <h4 className='text-sm'>{data.date}</h4>
     
     </div>
     
-    <h2 className='mt-2 text-xl font-semibold'>Make Youtube video</h2>
-    <p className='text-sm'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Exercitationem atque tempore id ullam suscipit pariatur hic ipsum ea quasi odit.</p>
+    <h2 className='mt-2 text-xl font-semibold'>{data.title}</h2>
+    <p className='text-sm'>{data.description}</p>
     <div className="mt-2">
-        <button className='w-full'>Completed</button>
+        <button className='w-full bg-red-500 py-1 px-2 text-sm'>Failed</button>
     </div>
   </div>
   )
