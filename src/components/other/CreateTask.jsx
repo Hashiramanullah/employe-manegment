@@ -14,8 +14,6 @@ const CreateTask = () => {
     e.preventDefault();
 
     const employeeData = JSON.parse(localStorage.getItem('employee'));
-    console.log(employeeData);
-    
     if (!employeeData) {
       console.error("No employee data found in local storage.");
       return;
@@ -35,8 +33,12 @@ const CreateTask = () => {
     employeeData.forEach((elem) => {
       if (asignTo === elem.firstName) {
         elem.tasks.push(newTask);
-        elem.taskCounts.newTask = elem.taskCounts.newTask + 1
+        console.log(elem);
+        
+        elem = elem.tasks +1
       }
+      console.log(employeeData);
+      
     });
 
     localStorage.setItem('employee', JSON.stringify(employeeData));
